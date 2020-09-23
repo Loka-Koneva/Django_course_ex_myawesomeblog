@@ -1,0 +1,49 @@
+.size_control {
+	max-width: 1000px;
+}
+
+.nav_style {
+	background-color: #ffbf80;
+}
+
+
+.navbar p {
+	color: black;
+	margin-bottom:0px;
+	font-size: 18px;
+}
+
+.navbar-nav a {
+	color: black;
+	font-size: 18px;
+	margin-left: 10px;
+}
+
+.navbar-nav a:active {
+	color: black;
+	font-weight: bold;
+}
+
+.section_text {
+	max-width: 800px;
+}
+
+.ul_style {
+	margin-left: 0; 
+	padding-left: 25px;
+	size: 22px;
+}
+
+.ul_h1 {
+	padding: 25px;
+	color: red;
+}
+
+footer {
+	background-color: #ffbf80;
+}
+
+#footer_text {
+	padding-top: 20px;
+	text-align: center;
+}

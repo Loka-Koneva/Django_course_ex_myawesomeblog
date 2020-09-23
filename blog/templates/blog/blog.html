@@ -1,0 +1,84 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	 <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<title>Uliana_Koneva_Blog</title>
+
+	<link rel="stylesheet" type='text/css' href="{%static 'css/blog.css'%}">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light nav_style">
+		<div class="container size_control">
+        <!-- Links -->
+            <p class="navbar-brand" href="#">Ульяна Конева. Блог про инвестиции</p>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto size_control">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Обо мне</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Инвестиционный калькулятор</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Все статьи</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Instagram</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container size_control">
+            <h1 class="ul_h1">Перечень статей:</h1>
+                <ul class="ul_style">
+                    <li style="list-style-type: none">Статья 2</li>
+                    <li style="list-style-type: none">Статья 3</li>
+                    <li style="list-style-type: none">Статья 3</li>
+                </ul>
+        </div>
+    </section>
+
+    <section class="jumbotron" style="padding-top:35px; margin-bottom: 0px">
+        <div class="container size_control">
+            <h1>Перечень статей:</h1>
+            <p class="lead text-muted">
+                <ul class="ul_style">
+                    <li style="list-style-type: none" >Статья 2</li>
+                    <li style="list-style-type: none">Статья 3</li>
+                    <li style="list-style-type: none">Статья 3</li>
+                </ul>
+            </p>
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <div class="container size_control">
+            <p id="footer_text">Все, написанное здесь, является личным мнением автора.<br>Не является индивидуально инвестиционной рекомендацией.</p><br><br>
+        </div>
+    </footer>
+
+</body>
+</html>
