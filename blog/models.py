@@ -6,3 +6,7 @@ class Post (models.Model):
 	post_date = models.DateTimeField()
 	post_text = models.TextField()
 	post_image = models.ImageField(upload_to='event_images/')
+
+	def get_summary(self):
+		sum = str(self.post_text[:50]) + '...'
+		return sum

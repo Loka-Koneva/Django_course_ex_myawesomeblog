@@ -28,15 +28,26 @@
 	max-width: 800px;
 }
 
+.main_section {
+	margin-bottom: 40px;
+}
+
 .ul_style {
 	margin-left: 0; 
 	padding-left: 25px;
-	size: 22px;
+	font-size: 18px;
 }
 
 .ul_h1 {
 	padding: 25px;
-	color: red;
+}
+
+.li_style {
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+.li_summary_text {
+	font-style: italic;
 }
 
 footer {

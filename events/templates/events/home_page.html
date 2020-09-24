@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+{% load static %}
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	 <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        
+        .size_control {
+            max-width: 1000px;
+        }
+        .nav_style {
+            background-color: #ffbf80;
+        }
+
+        .navbar p {
+            color: black;
+            margin-bottom:0px;
+            font-size: 18px;
+        }
+
+        .navbar-nav a {
+            color: black;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+        .navbar-nav a:active {
+            color: black;
+            font-weight: bold;
+        }
+
+        .section_text {
+            max-width: 800px;
+        }
+
+        footer {
+            background-color: #ffbf80;
+        }
+
+        #footer_text {
+            padding-top: 20px;
+            text-align: center;
+        }
+
+    </style>
+
+	<title>Uliana_Koneva_Blog</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-light nav_style">
+		<div class="container size_control">
+        <!-- Links -->
+            <p class="navbar-brand" href="#">Ульяна Конева. Блог про инвестиции</p>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto size_control">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'home' %}">Обо мне</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Инвестиционный калькулятор</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'showblog' %}">Все статьи</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+    <section class="jumbotron text-center" style="margin-bottom: 0px">
+        <div class="container size_control">
+            <h1>Добрый день! Меня зовут Ульяна. Рада приветствовать вас в моем блоге</h1>
+            <img src="{% static 'My_photo.png'%}"  height="350" style="margin-top: 30px">
+            <p class="lead text-muted"><br><br>Свой путь в инвестирование я начала в 2019 году с небольшой суммы в 2000р. Очень скоро я поняла, что такой способ копить и сохранять деньги более выгодный, чем вклады в банке. Кроме того он более гибкий и лучше подходит под разные инвестиционные цели.</p>
+    	    <p class="lead text-muted">Этот блог я начинаю вести в 2020 году. Хочу собрать здесь информацию об инвестировании, которую я уже успела найти и применить. Буду рада, если она будет полезна =)</p>
+            <p>
+                <a href="mailto:loka.koneva@gmail.com" class="btn btn-danger my-2">Написать автору</a>
+            </p>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container size_control">
+            <div class="row">
+                {% for event in events.all%}
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <img class="cart-img-top" width="100%" height="225" src = "{{event.event_image.url}}">
+                    	<div class="card-body">
+                       		<p class="card-text">{{event.event_text}}</p>
+                    	</div>
+          			</div>
+        		</div>
+        		{% endfor %}
+        	</div>
+        </div>
+    </div>
+
+    <footer>
+    	<div class="container size_control">
+    	    <p id="footer_text">Все, написанное здесь, является личным мнением автора.<br>Не является индивидуально инвестиционной рекомендацией.</p><br><br>
+        </div>
+    </footer>
+
+</body>
+</html>

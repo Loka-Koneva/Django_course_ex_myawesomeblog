@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-# import os
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -124,13 +124,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATICFILES_DIRS = [
+
+    #"/Project_2/blog/static",
+    os.path.join(BASE_DIR, 'Project_2/static/'),
+    os.path.join(BASE_DIR, 'blog/static/'),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  #BASE_DIR / 'static'
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = BASE_DIR / 'media' #os.path.join(BASE_DIR, 'media')
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #BASE_DIR / 'media'
 MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = [
-    "/Project/tutorials/django/events/static",
-    "/Project/tutorials/django/blog/static",
-]
