@@ -1,6 +1,7 @@
 .size_control {
 	max-width: 1000px;
 }
+
 .nav_style {
 	background-color: #ffbf80;
 }
@@ -25,6 +26,37 @@
 
 .section_text {
 	max-width: 800px;
+}
+
+.main_section {
+	margin-bottom: 40px;
+}
+
+.ul_style {
+	margin-left: 0; 
+	padding-left: 25px;
+	font-size: 18px;
+}
+
+.main_h1 {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	margin: 0px;
+
+}
+
+.main_text {
+	font-size: 18px;
+}
+
+.information {
+	margin-bottom: 2px;
+	color: 000000;
+}
+.recomendation {
+	font-size: 12px;
+	font-style: italic;
+	margin-bottom: 2px;
 }
 
 footer {

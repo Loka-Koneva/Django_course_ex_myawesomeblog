@@ -1,11 +1,11 @@
-{% load static%}
 <!DOCTYPE html>
 <html lang="ru">
+{% load static %}
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-     <!-- Latest compiled and minified CSS -->
+	 <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -14,13 +14,13 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <title>{{post.post_title}}</title>
+	<title>Uliana_Koneva_Blog</title>
 
-    <link rel="stylesheet" type='text/css' href="{%static 'css/blog.css'%}">
+	<link rel="stylesheet" type='text/css' href="{%static 'css/calculator.css'%}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light nav_style">
-        <div class="container size_control">
+	<nav class="navbar navbar-expand-md navbar-light nav_style">
+		<div class="container size_control">
         <!-- Links -->
             <p class="navbar-brand" href="#">Ульяна Конева. Блог про инвестиции</p>
 
@@ -35,10 +35,10 @@
                     <a class="nav-link" href="{% url 'home' %}">Обо мне</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'cal_in' %}">Инвестиционный калькулятор</a>
+                    <a class="nav-link active" href="{%url 'cal_in' %}">Инвестиционный калькулятор</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'showblog' %}">Все статьи</a>
+                    <a class="nav-link" href="{% url 'showblog' %}">Все статьи</a>
                 </li>
             </ul>
         </div>
@@ -47,10 +47,14 @@
 
     <section class="main_section">
         <div class="container size_control">
-            <h1 class="ul_h1">{{post.post_title}}</h1>
-            <p style="font-style: italic;">{{post.post_date}}</p>
-            <img src="{{ post.post_image.url}}" class="img-fluid">
-            <p>{{post.post_text}}</p>
+            <h1 class="main_h1">Инвестиционный калькулятор</h1>
+            <p class="lead text-muted main_text">Данный инструмент дает возможность более грамотно простраивать свои финансовые цели.</p>
+            <p>Необходимая сумма (с учетом инфляции {{get_inf}}% и сроком накопления {{get_years}} {{language_feature_year}}):</p>
+            <p>{{future_value}}</p>
+            <p>Необходимый ежемесячный платеж (с учетом доходности {{get_profit}}% годовых и сроком накопления {{get_years}} {{language_feature_year}}):</p>
+            <p>{{regular_payment}}</p>
+            <p>Сумма, необходимая в текущий момент времени для инвестирования на срок {{get_years}} {{language_feature_year}} под доходность {{get_profit}}% годовых для получения в финале необходимой суммы {{future_value}}:</p>
+            <p>{{investment_in_one_amount}}</p>
         </div>
     </section>
 
@@ -62,4 +66,3 @@
 
 </body>
 </html>
-

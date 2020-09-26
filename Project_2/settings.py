@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'calculator.apps.CalculatorConfig',
     'blog.apps.BlogConfig',
     'events.apps.EventsConfig',
     'django.contrib.admin',
@@ -129,6 +130,7 @@ STATICFILES_DIRS = [
     #"/Project_2/blog/static",
     os.path.join(BASE_DIR, 'Project_2/static/'),
     os.path.join(BASE_DIR, 'blog/static/'),
+    os.path.join(BASE_DIR, 'calculator/static/'),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')  #BASE_DIR / 'static'
