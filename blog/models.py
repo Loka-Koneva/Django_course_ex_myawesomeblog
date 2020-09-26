@@ -10,3 +10,6 @@ class Post (models.Model):
 	def get_summary(self):
 		sum = str(self.post_text[:50]) + '...'
 		return sum
+
+	def __str__(self):
+		return self.post_title

@@ -1,3 +1,8 @@
+@media screen and (max-device-width: 420px) {
+            h1 {font-size: 28px;}
+            span {display: none;}
+}
+
 .size_control {
 	max-width: 1000px;
 }

@@ -54,6 +54,13 @@
             text-align: center;
         }
 
+        @media screen and (max-device-width: 420px) {
+            h1 {font-size: 28px;}
+            span {display: none;}
+            .container {padding: 0px;}
+            #Me{height:260px;}
+        }
+
     </style>
 
 	<title>Uliana_Koneva_Blog</title>
@@ -62,7 +69,7 @@
 	<nav class="navbar navbar-expand-md navbar-light nav_style">
 		<div class="container size_control">
         <!-- Links -->
-            <p class="navbar-brand" href="#">Ульяна Конева. Блог про инвестиции</p>
+            <p class="navbar-brand" href="{% url 'home' %}"><span>Ульяна Конева. </span>Блог про инвестиции</p>
 
             <!-- Toggler/collapsibe Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" >
@@ -88,7 +95,7 @@
     <section class="jumbotron text-center" style="margin-bottom: 0px">
         <div class="container size_control">
             <h1>Добрый день! Меня зовут Ульяна. Рада приветствовать вас в моем блоге</h1>
-            <img src="{% static 'My_photo.png'%}"  height="350" style="margin-top: 30px">
+            <img id = "Me" src="{% static 'My_photo.png'%}"  height="350" style="margin-top: 30px">
             <p class="lead text-muted"><br><br>Свой путь в инвестирование я начала в 2019 году с небольшой суммы в 2000р. Очень скоро я поняла, что такой способ копить и сохранять деньги более выгодный, чем вклады в банке. Кроме того он более гибкий и лучше подходит под разные инвестиционные цели.</p>
     	    <p class="lead text-muted">Этот блог я начинаю вести в 2020 году. Хочу собрать здесь информацию об инвестировании, которую я уже успела найти и применить. Буду рада, если она будет полезна =)</p>
             <p>
